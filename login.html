@@ -182,12 +182,35 @@
                                         <button type="submit" name="signin" value="signin" class="btn btn-success"><i class="fa fa-sign-in" aria-hidden="true"></i> Login</button>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
+</form>
 
-                    </div>
-                </div>
+<script>
+document.querySelector('form').addEventListener('submit', function(e) {
+    e.preventDefault(); // পেজ রিলোড হওয়া আটকাবে
 
+    // আপনার পছন্দের রোল ও পাসওয়ার্ড (ইচ্ছেমতো পরিবর্তন করতে পারেন)
+    var correctID = "123456"; 
+    var correctPass = "123456";
+
+    // ইনপুট দেওয়া আইডি এবং পাসওয়ার্ড ধরা
+    var inputID = document.querySelector('input[name="applicant_id"]').value.trim();
+    var inputPass = document.querySelector('input[name="password"]').value.trim();
+
+    // মিলিয়ে দেখা
+    if (inputID === correctID && inputPass === correctPass) {
+        window.location.href = "student-dashboard.html";
+    } else {
+        alert("ভুল Applicant ID অথবা Password প্রদান করেছেন! অনুগ্রহ করে সঠিক তথ্য দিয়ে চেষ্টা করুন।");
+    }
+});
+</script>
+
+</div>
+
+</div>
+</div>
+
+</div>
 
             </div>
 
